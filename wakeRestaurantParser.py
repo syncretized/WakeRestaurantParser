@@ -26,7 +26,6 @@ def data_loader(table_name, column_keys, column_names, row, conn, cur):
     insert_sql = 'INSERT INTO %s (%s) VALUES (%s)' % (table_name, column_names, place_holders)
     # print (insert_sql, row)
     cur.execute(insert_sql, row)
-
     conn.commit()
 
 
